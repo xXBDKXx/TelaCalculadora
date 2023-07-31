@@ -41,22 +41,31 @@ namespace TelaCalculadora
 
         private void BotãoSoma_Click(object sender, EventArgs e)
         {
-            maskedTextBox1.Text = "" + this.Operacao.Somar(Convert.ToDouble(maskedTextBox1.Text));
+            textBox1.Text = "" + this.Operacao.Somar(Convert.ToDouble(maskedTextBox1.Text));
+            maskedTextBox1.Text = "";
         }//Botão Soma
 
         private void BotãoSubtração_Click(object sender, EventArgs e)
         {
-            maskedTextBox1.Text = "" + this.Operacao.Subtrair(Convert.ToDouble(maskedTextBox1.Text));
+            textBox1.Text = "" + this.Operacao.Subtrair(Convert.ToDouble(maskedTextBox1.Text));
+            maskedTextBox1.Text = "";
         }//Botão Menos
 
         private void BotãoDivisão_Click(object sender, EventArgs e)
         {
-            maskedTextBox1.Text = "" + this.Operacao.Divisao(Convert.ToDouble(maskedTextBox1.Text));
+            textBox1.Text = "" + this.Operacao.Divisao(Convert.ToDouble(maskedTextBox1.Text));
+            maskedTextBox1.Text = "";
         }//Divisão
 
         private void BotãoMulti_Click(object sender, EventArgs e)
         {
-            maskedTextBox1.Text = "" + this.Operacao.Multiplicar(Convert.ToDouble(maskedTextBox1.Text));
+            textBox1.Text = "" + this.Operacao.Multiplicar(Convert.ToDouble(maskedTextBox1.Text));
+            maskedTextBox1.Text = "";
         }//Multiplicar
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }//Fim da Classe
 }//Fim do Projeto
