@@ -33,14 +33,14 @@ namespace TelaCalculadora
             return ConsultarOperacao -= num;
         }//fim do subtrair
 
-        public double Divisao(double num)
+        public double Divisao(double bas, double exp)
         {
-            return ConsultarOperacao /= num;
+            return bas / exp;
         }//Fim do Dividir
 
-        public double Multiplicar(double num)
+        public double Multiplicar(double bas, double exp)
         { 
-            return ConsultarOperacao *= num;
+            return bas * exp;
         }//Fim do Multiplicar
 
         public double Potencia(double bas, double exp)
