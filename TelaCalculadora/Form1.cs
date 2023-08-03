@@ -59,14 +59,33 @@ namespace TelaCalculadora
         
         private void BotãoDivisão_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "" + this.Operacao.Divisao(Convert.ToDouble(maskedTextBox1.Text));
-            maskedTextBox1.Text = "";
-        }//Divisão
+
+            if (Chave(flag) == true)
+            {
+                exp = Convert.ToDouble(maskedTextBox1.Text);
+            }
+            else
+            {
+                bas = Convert.ToDouble(maskedTextBox1.Text);
+            }//Fim do If
+
+            textBox1.Text = "" + this.Operacao.Divisao(exp, bas);
+            flag = Chave(flag);
+        }//Divisão               
 
         private void BotãoMulti_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "" + this.Operacao.Multiplicar(Convert.ToDouble(maskedTextBox1.Text));
-            maskedTextBox1.Text = "";
+            if (Chave(flag) == true)
+            {
+                exp = Convert.ToDouble(maskedTextBox1.Text);
+            }
+            else
+            {
+                bas = Convert.ToDouble(maskedTextBox1.Text);
+            }//Fim do If
+
+            textBox1.Text = "" + this.Operacao.Multiplicar(exp, bas);
+            flag = Chave(flag);
         }//Multiplicar
 
         private void textBox1_TextChanged(object sender, EventArgs e)
