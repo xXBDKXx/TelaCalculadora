@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,10 +14,14 @@ namespace TelaCalculadora
     public partial class Form1 : Form
     {
         Model Operacao;
+        public Boolean flag;
+        public double exp;
+        public double bas;
         public Form1()
         {
             InitializeComponent();
             Operacao = new Model();
+            flag = false;
         }//FIm do Construtor
 
         private void Form1_Load(object sender, EventArgs e)
@@ -50,7 +55,8 @@ namespace TelaCalculadora
             textBox1.Text = "" + this.Operacao.Subtrair(Convert.ToDouble(maskedTextBox1.Text));
             maskedTextBox1.Text = "";
         }//Botão Menos
-
+        
+        
         private void BotãoDivisão_Click(object sender, EventArgs e)
         {
             textBox1.Text = "" + this.Operacao.Divisao(Convert.ToDouble(maskedTextBox1.Text));
@@ -67,5 +73,42 @@ namespace TelaCalculadora
         {
 
         }
+
+        private void Potencia_Click(object sender, EventArgs e)
+        {
+            if(Chave(flag) == true)
+            {
+                exp = Convert.ToDouble(maskedTextBox1.Text);
+            }
+            else
+            {
+                bas = Convert.ToDouble(maskedTextBox1.Text);
+            }//Fim do If
+
+            textBox1.Text = "" + this.Operacao.Potencia(exp, bas);
+            flag = Chave(flag);
+        }//Fim do Potencia
+
+        private void BotãoRaiz_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "" + this.Operacao.Raiz(Convert.ToDouble(maskedTextBox1.Text));
+            maskedTextBox1.Text = "";
+        }
+
+        //--------------------------------------------CHAVES--------------------------------------------
+        //----------------------------------------------------------------------------------------------
+        public Boolean Chave(Boolean entrada)
+        {
+            if (entrada == true)
+            {
+                return false;
+            }
+            else
+            { 
+                return true; 
+            }//Fim do IF
+        }//Fim do Metodo
+        //-----------------------------------------------------------------------------------------------
+        //-----------------------------------------------------------------------------------------------
     }//Fim da Classe
 }//Fim do Projeto

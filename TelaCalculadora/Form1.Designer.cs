@@ -38,6 +38,8 @@
             this.BotãoDivisão = new System.Windows.Forms.Button();
             this.Conta = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Potencia = new System.Windows.Forms.Button();
+            this.BotãoRaiz = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -132,7 +134,7 @@
             this.Conta.AutoSize = true;
             this.Conta.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Conta.Font = new System.Drawing.Font("Harlow Solid Italic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Conta.Location = new System.Drawing.Point(12, 344);
+            this.Conta.Location = new System.Drawing.Point(12, 405);
             this.Conta.Name = "Conta";
             this.Conta.Size = new System.Drawing.Size(79, 20);
             this.Conta.TabIndex = 8;
@@ -142,11 +144,37 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.textBox1.Font = new System.Drawing.Font("Geometr706 BlkCn BT", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(109, 342);
+            this.textBox1.Location = new System.Drawing.Point(106, 400);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(206, 27);
             this.textBox1.TabIndex = 9;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // Potencia
+            // 
+            this.Potencia.BackColor = System.Drawing.Color.Red;
+            this.Potencia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Potencia.Font = new System.Drawing.Font("Geometr212 BkCn BT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Potencia.Location = new System.Drawing.Point(106, 331);
+            this.Potencia.Name = "Potencia";
+            this.Potencia.Size = new System.Drawing.Size(77, 38);
+            this.Potencia.TabIndex = 10;
+            this.Potencia.Text = "Pot";
+            this.Potencia.UseVisualStyleBackColor = false;
+            this.Potencia.Click += new System.EventHandler(this.Potencia_Click);
+            // 
+            // BotãoRaiz
+            // 
+            this.BotãoRaiz.BackColor = System.Drawing.Color.Red;
+            this.BotãoRaiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BotãoRaiz.Font = new System.Drawing.Font("Geometr212 BkCn BT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotãoRaiz.Location = new System.Drawing.Point(220, 331);
+            this.BotãoRaiz.Name = "BotãoRaiz";
+            this.BotãoRaiz.Size = new System.Drawing.Size(77, 38);
+            this.BotãoRaiz.TabIndex = 11;
+            this.BotãoRaiz.Text = "Raiz";
+            this.BotãoRaiz.UseVisualStyleBackColor = false;
+            this.BotãoRaiz.Click += new System.EventHandler(this.BotãoRaiz_Click);
             // 
             // Form1
             // 
@@ -155,6 +183,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(400, 550);
+            this.Controls.Add(this.BotãoRaiz);
+            this.Controls.Add(this.Potencia);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Conta);
             this.Controls.Add(this.BotãoDivisão);
@@ -186,6 +216,8 @@
         private System.Windows.Forms.Button BotãoDivisão;
         private System.Windows.Forms.Label Conta;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Potencia;
+        private System.Windows.Forms.Button BotãoRaiz;
     }
 }
 
